@@ -22,10 +22,17 @@
   <remote  name="bork"
            fetch="https://github.com/op5-q"/>
   
-    <remote  name="home"
+  <remote  name="home"
            fetch="http://server.adhityamohan.in/poad42"/>
 
-  <!-- General -->
+  <remote  name="dev"
+           fetch="https://github.com/caiwx0806"
+	   revision="ten" />
+
+  <remote  name="dev2"
+           fetch="https://gitlab.com/caiwx0806" />
+
+ <!-- General -->
   <project path="bionic" name="platform_bionic" remote="aosip" />
   <project path="bootable/recovery" name="bootable_recovery" remote="bork" revision="ten" />
 
@@ -121,7 +128,7 @@
   <project path="vendor/qcom/opensource/cryptfs_hw" name="platform_vendor_qcom_opensource_cryptfs_hw" remote="aosip" />
 
   <project path="packages/apps/PixelLiveWallpaper" name="packages_apps_PixelLiveWallpaper" remote="home" revision="ten" />
-  <project path="vendor/gapps" name="vendor_gapps" remote="home" revision="ten" clone-depth="1"/>
+  <project path="vendor/gapps" name="vendor_gapps" remote="dev2" revision="ten-crd" clone-depth="1"/>
   <project path="vendor/pixelstyle" name="platform_vendor_pixelstyle" remote="bork" revision="ten" />
   <project path="vendor/google-customization" name="PixelExperience/vendor_google_customization" remote="github" revision="ten" />
   <project path="system/apex" name="PixelExperience/system_apex" remote="github" revision="ten" />
@@ -139,5 +146,11 @@
 
   <project path="prebuilts/clang/host/linux-x86/clang-proton" name="kdrag0n/proton-clang" remote="github" revision="master" />
   <project path="external/pulse" name="external_pulse" remote="bork" revision="ten" />
+
+  <!--Oneplus5 -->
+  <project name="device_oneplus_cheeseburger" path="device/oneplus/cheeseburger" remote="dev" />
+  <project name="device_oneplus_msm8998-common" path="device/oneplus/msm8998-common" remote="dev" />
+  <project name="kernel_oneplus_msm8998" path="kernel/oneplus/msm8998" remote="dev" />
+  <project name="vendor_oneplus" path="vendor/oneplus" remote="dev" />
 
 </manifest>
